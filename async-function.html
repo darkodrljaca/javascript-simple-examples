@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script async</title>
+</head>
+<body>
+    <h1>Java Script - async-function</h1>    
+    <p>Using async and await, then no need to explicitly configure promise 
+        to enable asynchronous and promise-based behavior. </p>
+    <p id="message"></p>
+</body>
+</html>
+
+<script>
+    function returnMessage(message, time) {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve(message)
+            }, time);
+        });
+    }
+
+    async function testFunc() {
+        document.getElementById("message").innerHTML = "waiting ...";
+        var displayMessage = await returnMessage('I showed up after 5 seconds', 5000);        
+        document.getElementById("message").innerHTML = displayMessage;
+    }
+
+    testFunc();
+</script>    
