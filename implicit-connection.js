@@ -1,5 +1,5 @@
 
-// The example of implicitly connecting functions and object.
+// The example of implicity connecting functions and object.
 
 
 function totalQuantitySold() {
