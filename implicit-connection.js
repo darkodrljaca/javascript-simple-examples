@@ -1,6 +1,6 @@
-/*
-The example of implicitly connecting functions and object.
-*/
+
+// The example of implicitly connecting functions and object.
+
 
 function totalQuantitySold() {
     let total = 0;
