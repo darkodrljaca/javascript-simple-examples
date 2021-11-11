@@ -13,8 +13,11 @@ function checkSimilarity(object1, object2) {
     let message = "";
     if(arr1.length === arr2.length) {
         for(let i = 0; i < arr1.length; i++) {
-            if(arr1[i] === arr2[i] && object1[arr1[i]] === object2[arr2[i]]) {                
-                message = 'They are equal.'
+            if(arr1[i] === arr2[i]) {
+                message = 'They have same only attribute names.';
+                if(object1[arr1[i]] === object2[arr2[i]]) {
+                    message = 'They are equal.';                    
+                }                                
             } else {
                 message = "They are not equal.";
             }
