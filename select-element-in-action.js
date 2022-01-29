@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
 		} else if (event.target.value == "two") {
 			paragraf.innerHTML = "";
 			paragraf.innerHTML = text + " ... neki drugi tekst ";
+		} else { // vrati na inicijalnu vrednost paragrafa
+			paragraf.innerHTML = "";
+			paragraf.innerHTML = text;
 		}
 	});
 });
